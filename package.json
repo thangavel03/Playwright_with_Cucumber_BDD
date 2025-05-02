@@ -1,0 +1,30 @@
+{
+  "name": "playwright-automation-framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "clean-json": "rimraf reports/json && mkdirp reports/json",
+  "test": "cucumber-js",
+  "report": "ts-node generate-report.ts && npm run open-report",
+  "test-report": "npm run clean-json && npm run test && npm run report",
+  "open-report": "node openReport.mjs"
+},
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.8.0",
+    "@playwright/test": "^1.45.3",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.1.0",
+    "fs-extra": "^11.3.0",
+    "mkdirp": "^3.0.1",
+    "multiple-cucumber-html-reporter": "^3.9.2",
+    "open": "^10.1.2",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
